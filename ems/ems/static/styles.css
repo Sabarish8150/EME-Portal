@@ -1,0 +1,67 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #2980b9, #3498db);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  max-width: 400px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+h2 {
+  text-align: center;
+  color: #333;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 16px;
+}
+input[type="submit"] {
+  width: 100%;
+  background-color: #2980b9;
+  color: #fff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+input[type="submit"]:hover {
+  background-color: #3498db;
+}
+.forgot-password,
+.google-signin {
+  text-align: center;
+  margin-top: 10px;
+}
+.forgot-password a,
+.google-signin a {
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+}
+.google-signin {
+  padding: 10px 0;
+  border: 1px solid black;
+  
+  border-radius: 25px;
+}
+.google-signin img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
