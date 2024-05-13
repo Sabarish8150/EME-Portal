@@ -75,15 +75,21 @@ WSGI_APPLICATION = 'ems.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'EMS',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
-    }
-}
+import psycopg2
+
+try:
+    conn = psycopg2.connect(
+        dbname='EMS',
+        user='postgres',
+        password='1234',
+        host='localhost',
+        port='5433'
+    )
+    print("Connected to PostgreSQL successfully!")
+    conn.close()
+except psycopg2.OperationalError as e:
+    print(f"Unable to connect to PostgreSQL: {e}")
+
 
 
 # Password validation
